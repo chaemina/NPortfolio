@@ -9,7 +9,7 @@ import {
   education,
 } from "../../constants/timeline";
 
-export default function TimelinePage() {
+export default function BioTemplate() {
   return (
     <main className="min-h-screen w-full px-4 md:px-8 py-10">
       <header className="mb-8">

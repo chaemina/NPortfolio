@@ -12,6 +12,7 @@ export default function MainTemplate() {
   return (
     <main className="h-full w-full flex flex-col justify-between">
       <div className="grid flex-1 text-xl p-2 gap-4 grid-cols-1 sm:grid-cols-2 auto-rows-auto">
+        {/* left */}
         <div className="grid">
           <div className="flex flex-col">
             <span>CHAEMINA</span>
@@ -21,10 +22,9 @@ export default function MainTemplate() {
           </div>
         </div>
 
-
-        <div className="grid ">
+        <div className="grid">
           <div
-            className="md:block transition-opacity duration-300"
+            className="lg:w-3/4 hidden md:block transition-opacity duration-300"
             style={{ opacity }}
           >
             {aboutme}
@@ -32,13 +32,13 @@ export default function MainTemplate() {
 
           <div className="flex flex-col lg:justify-start">
             <a href="mailto:chaemina82@naver.com">Email</a>
-            <span>Project Archive</span>
+            <a onClick={() => router.push("/archive")}> Project Archive </a>
             <a onClick={() => router.push("/bio")}> Biography </a>
             <a href="https://github.com/chaemina">Github</a>
             <a
               onMouseEnter={onEnter}
               onMouseLeave={onLeave}
-               onClick={onClick} 
+              onClick={onClick}
               className="cursor-pointer"
             >
               About me
@@ -47,8 +47,14 @@ export default function MainTemplate() {
         </div>
       </div>
 
-      {/* section 2 - Banner */}
       <Banner />
+
+      <div
+            className="md:hidden transition-opacity duration-300"
+            style={{ opacity }}
+          >
+            {aboutme}
+          </div>
     </main>
   );
 }
