@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: "MyFont";
+  src: url("fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MySans";
+  src: url("fonts/NotoSansKR.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root{
+  --bg:#ffffff;
+  --fg:#0a0a0a;
+   --hover-color: #007bff;
+}
+a:hover,
+button:hover { 
+  color: var(--hover-color);
+}
+
+html, body {
+  font-family: "MyFont", "MySans", sans-serif;
+}
