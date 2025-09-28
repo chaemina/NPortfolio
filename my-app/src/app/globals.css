@@ -4,9 +4,10 @@
 @font-face {
   font-family: "MyFont";
   src: url("fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
-  font-weight: 600;
+  font-weight: 100 700; 
   font-style: normal;
 }
+
 @font-face {
   font-family: "MySans";
   src: url("fonts/NotoSansKR.ttf") format("truetype");
@@ -27,4 +28,5 @@ button:hover {
 
 html, body {
   font-family: "MyFont", "MySans", sans-serif;
+  font-weight: 600;
 }

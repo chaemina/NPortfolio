@@ -12,7 +12,7 @@ export default function ProjectCard({ project, onClick }: Props) {
       className="flex flex-col justify-center items-center hover:cursor-pointer hover:bg-gray-100 "
       onClick={onClick}
     >
-      <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+      <div className="w-full h-48 dark:bg-gray-700 flex items-center justify-center">
         {project.image ? (
           <img
             src={project.image}

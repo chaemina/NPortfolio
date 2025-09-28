@@ -9,13 +9,14 @@ interface Props {
 export default function ProjectModal({ project, onClose }: Props) {
   return (
     <div
-      className="fixed inset-0  flex justify-center items-center z-50"
+      className="fixed inset-0 bg-gray-50/75 flex justify-center items-center z-50"
       onClick={onClose} // 배경 클릭 시 닫기
     >
       <div
-        className="bg-white dark:bg-gray-800 w-11/12 max-w-6xl h-5/6 flex rounded-xl overflow-hidden shadow-lg relative"
-        onClick={(e) => e.stopPropagation()} // 모달 안 클릭 시 닫히지 않음
+        className="flex flex-col md:flex-row bg-white dark:bg-gray-800 w-full md:w-11/12 md:max-w-6xl h-screen md:h-5/6 overflow-hidden shadow-xl relative"
+        onClick={(e) => e.stopPropagation()}
       >
+        {/* 닫기 버튼 */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-700 dark:text-gray-300 text-xl font-bold hover:text-black dark:hover:text-white transition"
@@ -23,22 +24,29 @@ export default function ProjectModal({ project, onClose }: Props) {
           x
         </button>
 
-        {/* 왼쪽 이미지 */}
-        <div className="w-1/2 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+        {/* 이미지 영역 */}
+        <div className="w-full md:w-2/3 h-1/3 md:h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
           {project.image ? (
-            <img src={project.image} alt={project.title} className="object-contain h-full w-full" />
+            <img
+              src={project.image}
+              alt={project.title}
+              className="object-contain h-full w-full"
+            />
           ) : (
             <span className="text-gray-400">No Image</span>
           )}
         </div>
 
-        {/* 오른쪽 role 설명 */}
-        <div className="w-1/2 p-6 overflow-y-auto">
-          <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-          <p className="mb-4 text-gray-700 dark:text-gray-300">{project.description}</p>
-          <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+        {/* 텍스트 영역 */}
+        <div className="w-full md:w-1/3 h-2/3 md:h-full p-6 overflow-y-auto">
+          <h2 className="text-lg mb-4">{project.title}</h2>
+          <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">
+            {project.description}
+          </p>
+          <hr className="border-gray-300 mb-4 dark:border-gray-700" />
+          <ul className="list-none space-y-2 text-gray-700 dark:text-gray-300">
             {project.roles?.map((role, idx) => (
-              <li key={idx} className="text-sm md:text-base">
+              <li key={idx} className="text-sm font-medium">
                 {role}
               </li>
             ))}
@@ -49,7 +57,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 underline"
+                className="border border-white text-sm bg-gray-50 p-1 w-20 flex justify-center items-center rounded-lg hover:border-gray-300"
               >
                 Github
               </a>
@@ -59,9 +67,19 @@ export default function ProjectModal({ project, onClose }: Props) {
                 href={project.figma}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-purple-600 underline"
+                className="border border-white text-sm bg-gray-50 p-1 w-20 flex justify-center items-center rounded-lg hover:border-gray-300"
               >
                 Figma
+              </a>
+            )}
+            {project.application && (
+              <a
+                href={project.application}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white text-sm bg-gray-50 p-1 w-30 flex justify-center items-center rounded-lg hover:border-gray-300"
+              >
+                Application
               </a>
             )}
           </div>

@@ -36,7 +36,7 @@ export const experiencesdetail: ExperienceType[] = [
     {
       year: "2023",
       title: "KIV 월드프렌즈코리아 IT봉사단",
-      link: "https://notion.so/pyting",
+      link:  "https://polydactyl-flavor-6aa.notion.site/2023-ICT-PY-TING-87a67b8db40a437db3b29d5a26f806ff",
       details: [
         "파견 국가 : 네팔",
         "수혜 대상 : Swopna Sansar school 선생님",
@@ -47,7 +47,7 @@ export const experiencesdetail: ExperienceType[] = [
     {
       year: "2023",
       title: "카카오테크 캠퍼스 Web FrontEnd 수료",
-      link: "https://notion.so/kakaotech",
+      link:  "https://superb-avocado-776.notion.site/ced5109a83134a9396f8d113a00791ce",
       details: [
         "학습 내용 : HTML, CSS, JavaScript, React",
         "프로젝트 : 카카오 쇼핑하기 클론코딩, 한국어 교육 플랫폼 Garden",
@@ -56,7 +56,7 @@ export const experiencesdetail: ExperienceType[] = [
     {
       year: "2023",
       title: "SW 봉사 동아리 소봉이들 회장",
-      link: "https://notion.so/sobong",
+      link: "https://hickory-guarantee-59a.notion.site/SoBongE-45c5de0046f64ceb97ecd3a967df6517",
       details: [
         "자체 제작 컨텐츠 유튜브 운영",
         "SNS 홍보 활동",
@@ -67,7 +67,7 @@ export const experiencesdetail: ExperienceType[] = [
     {
       year: "2024",
       title: "코드클럽 봉사단 소봉이들 팀장",
-      link: "https://notion.so/codeclub",
+      link:  "https://hickory-guarantee-59a.notion.site/2024-9a43838dad85483d94adeafb9d4ea649",
       details: [
         "교육 대상 : 마지초등학교 6학년",
         "교육 주제 : 엔트리로 조이스틱 모듈 게임 제작",
@@ -78,7 +78,7 @@ export const experiencesdetail: ExperienceType[] = [
     {
       year: "2024",
       title: "한국정보처리학회 ASK 2024 논문 게재",
-      link: "/pdf/ask2024.pdf",
+      link: "https://www.manuscriptlink.com/society/kips/conference/ask2024/file/downloadSoConfManuscript/abs/KIPS_C2024A0101",
       details: [
         "연구 주제 : 대화형 AI를 통한 자폐 아동 치료 플랫폼 개발",
         "요약 : 스무 고개 게임을 활용해 자폐 아동 사회성 기술 향상 지원",
@@ -87,7 +87,7 @@ export const experiencesdetail: ExperienceType[] = [
     {
       year: "2024",
       title: "KIV 월드프렌즈코리아 IT봉사단",
-      link: "https://notion.so/holssi",
+      link: "https://unmarred-nerine-019.notion.site/2024-ICT-Holssi-9ef0f43566ea4c688182a0fc5580e30a",
       details: [
         "파견 국가 : 인도네시아",
         "수혜 대상 : 다르마자야 정보 및 비즈니스 대학 (IIB)",
