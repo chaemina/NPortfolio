@@ -11,6 +11,7 @@ export const experiencesdetail: ExperienceType[] = [
       title: "KIV 월드프렌즈코리아 IT봉사단",
       details: [
         "파견 국가 : 가나",
+        "활동 분야 : 온라인 IT 교육",
         "수혜 대상 : 가나대학교(University of Ghana) 학생",
         "활동 내용 : 한국어, 영어 교안 제작 및 Python 교육",
       ],
@@ -35,10 +36,11 @@ export const experiencesdetail: ExperienceType[] = [
     },
     {
       year: "2023",
-      title: "KIV 월드프렌즈코리아 IT봉사단",
+      title: "KIV 월드프렌즈코리아 IT봉사단 팀장",
       link:  "https://polydactyl-flavor-6aa.notion.site/2023-ICT-PY-TING-87a67b8db40a437db3b29d5a26f806ff",
       details: [
         "파견 국가 : 네팔",
+        "활동 분야 : 온라인 IT 교육",
         "수혜 대상 : Swopna Sansar school 선생님",
         "현지기관 컨택, 한국어·영어 교안 제작",
         "Python 교육, Web 프로그래밍 교육, 한국 문화 교류",
@@ -86,12 +88,34 @@ export const experiencesdetail: ExperienceType[] = [
     },
     {
       year: "2024",
-      title: "KIV 월드프렌즈코리아 IT봉사단",
+      title: "KIV 월드프렌즈코리아 IT봉사단 팀장",
       link: "https://unmarred-nerine-019.notion.site/2024-ICT-Holssi-9ef0f43566ea4c688182a0fc5580e30a",
       details: [
         "파견 국가 : 인도네시아",
+        "활동 분야 : 온라인 IT 프로젝트",
         "수혜 대상 : 다르마자야 정보 및 비즈니스 대학 (IIB)",
         "프로젝트 주제 : Waste Bank 활용 안드로이드 앱 개발",
+      ],
+    },
+    {
+      year: "2025",
+      title: "ICICT 2025 Springer LNNS 논문 게재",
+      link: "https://link.springer.com/chapter/10.1007/978-981-96-6432-0_40",
+      details: [
+        "Title : Development of a Waste Bank Application with Real-Time Monitoring Dashboard for Sustainable Waste Management",
+        "Subject : This study aims to design and implement a Waste Bank application to improve waste management efficiency through digital solutions",
+      ],
+    },
+        {
+      year: "2025",
+      title: "KIV 월드프렌즈코리아 IT봉사단 팀장",
+      link: "https://dream-shop-ten.vercel.app/intro",
+        details: [
+        "파견 국가 : 몽골",
+        "활동 분야 : 현지 파견",
+        "수혜 대상 : Hangai University, Hangai Vocational Training School, Arvist Secondary School",
+        "현지기관 컨택, 그래픽 디자인·웹(GerShop) 및 한국 문화 교육을 기획·운영, 한국어·몽골어 교안 제작",
+        "복습 퀴즈와 디지털 한국 관광을 위한 메타버스 구현, 메인 웹사이트 개발, SNS 및 언론 홍보",
       ],
     },
 ];

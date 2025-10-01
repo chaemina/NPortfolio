@@ -98,17 +98,17 @@ export const experiences: TimelineItem[] = [
   },
   {
     type: "experience",
-    title: "ICICT 2025 - Springer LNNS 시리즈 논문 게재 승인",
-    displayDate: "2025.02.21",
-    start: "2025-02-21",
-  },
-  {
-    type: "experience",
     title: "코코몽 팀장",
     org: "2025 KIV 월드프렌즈코리아 IT 봉사단",
     displayDate: "2025.07 ~ 2025.08",
     start: "2025-07-01",
     end: "2025-08-31",
+  },  
+  {
+    type: "experience",
+    title: "ICICT 2025 - Springer LNNS 시리즈 논문 게재",
+    displayDate: "2025.10.01",
+    start: "2025-10-1",
   },
 ];
 
@@ -123,23 +123,34 @@ export const awards: TimelineItem[] = [
   {
     type: "award",
     title:
-      "한국지능 정보사회진흥원 우수상(활동영상분야), KIV 월드프렌즈코리아 IT봉사단 성과발표대회",
+      "우수상 (활동영상부문)",
+    org: "KIV 월드프렌즈코리아 IT봉사단 성과발표대회",
     displayDate: "2023.11.30",
     start: "2023-11-30",
   },
   {
     type: "award",
     title:
-      "소프트웨어중심대학 사업단장상 금상, SW동아리 발굴 및 지원 프로그램 최종결과발표회",
+      "금상",
+    org: "SW동아리 발굴 및 지원 프로그램 최종결과발표회",
     displayDate: "2023.12.08",
     start: "2023-12-08",
   },
   {
     type: "award",
     title:
-      "소프트웨어중심대학 사업단장상 금상, 2024 교내 디지털경진대회(SW부문)",
+      "금상",
+    org: "2024 교내 디지털경진대회(SW부문)",
     displayDate: "2024.06.07",
     start: "2024-06-07",
+  },
+   {
+    type: "award",
+    title:
+      "동상",
+    org: "SW동아리 발굴 및 지원 프로그램 최종결과발표회",
+    displayDate: "2024.12",
+    start: "2024-12",
   },
   {
     type: "award",
@@ -159,7 +170,8 @@ export const education: TimelineItem[] = [
   {
     type: "education",
     title: "전남대학교 소프트웨어공학과 재학",
-    displayDate: "",
+    displayDate: "2021 - 2026(졸업예정)",
+    start: "2021-03-10",
   },
   {
     type: "education",

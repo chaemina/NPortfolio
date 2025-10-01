@@ -4,6 +4,7 @@ import Banner from "../atoms/Banner";
 import useHoverOpacity from "../../hooks/useHoverOpacity";
 import { aboutme } from "../../constants/aboutme";
 import { useRouter } from "next/navigation";
+import profile from "../../../public/images/Profile.jpg"
 
 export default function MainTemplate() {
   const router = useRouter();
@@ -20,6 +21,12 @@ export default function MainTemplate() {
             <span>Frontend Developer</span>
             <span>Web/Application</span>
           </div>
+
+          <div className="" style={{opacity}}>
+            <img src="/images/Profile.jpg" width={200} className="2xl:w-90"/>
+
+          </div>
+        
         </div>
 
         <div className="grid">
