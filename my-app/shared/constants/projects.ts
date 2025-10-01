@@ -89,7 +89,7 @@ export const projects: ProjectType[] = [
   {
     title: "Waste Bank App",
     description: "geolocation을 통한 실시간 위치 확인으로 Waste Bank 운영 효율성을 향상시키는 쓰레기 수집 모니터링 애플리케이션입니다.",
-    github: "https://github.com/chaemina/WasteBankApp/tree/feat_mina",
+    github: "https://github.com/chaemina/WasteBankApp/tree/dev",
     application : "https://wb-tutorial.vercel.app/",
    roles: [
   "UI/UX 설계: 클라이언트 제공 디자인 기반으로 접근성 개선 UI/UX 제안",
