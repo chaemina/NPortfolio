@@ -31,7 +31,6 @@ export default function ArchiveTemplate() {
         </h1>
       </header>
 
-      {/* Content */}
       <div>
         {activeTab === "experience" && <Experience />}
         {activeTab === "projects" && <Projects />}

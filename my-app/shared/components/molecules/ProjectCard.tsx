@@ -1,5 +1,7 @@
 "use client";
+
 import { ProjectType } from "../../constants/projects";
+import usePressEffect from "../../hooks/usePressEffect";
 
 interface Props {
   project: ProjectType;
@@ -7,12 +9,20 @@ interface Props {
 }
 
 export default function ProjectCard({ project, onClick }: Props) {
+  const { style, onPressStart, onPressEnd } = usePressEffect(0.88, 300);
+
   return (
     <div
-      className="flex flex-col justify-center items-center hover:cursor-pointer hover:bg-gray-100 "
+      className="flex flex-col justify-center items-center hover:cursor-pointer hover:bg-gray-100 transition-all duration-200"
       onClick={onClick}
+      onMouseDown={onPressStart}
+      onMouseUp={onPressEnd}
+      onMouseLeave={onPressEnd}
+      onTouchStart={onPressStart}
+      onTouchEnd={onPressEnd}
+      style={style}
     >
-      <div className="w-full h-48 dark:bg-gray-700 flex items-center justify-center">
+      <div className="w-full h-48 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
         {project.image ? (
           <img
             src={project.image}
@@ -24,9 +34,8 @@ export default function ProjectCard({ project, onClick }: Props) {
         )}
       </div>
 
-      {/* title만 이미지 아래 출력 */}
       <div className="p-4">
-        <p className="text-xs md:text-sm text-gray-500 dark:text-white">
+        <p className="text-xs md:text-sm text-gray-500 dark:text-white text-center">
           {project.title}
         </p>
       </div>

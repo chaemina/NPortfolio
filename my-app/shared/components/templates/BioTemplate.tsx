@@ -8,8 +8,17 @@ import {
   qualifications,
   education,
 } from "../../constants/timeline";
+import useFadeScaleAnimation from "../../hooks/useFadeScaleAnimation";
 
 export default function BioTemplate() {
+  const blocks = [
+    { title: "Career", items: career },
+    { title: "Experience Overview", items: experiences },
+    { title: "Awards", items: awards },
+    { title: "Qualifications", items: qualifications },
+    { title: "Education", items: education },
+  ];
+
   return (
     <main className="min-h-screen w-full px-4 md:px-8 py-10">
       <header className="mb-8">
@@ -20,11 +29,20 @@ export default function BioTemplate() {
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <Bio title="Career" items={career} />
-        <Bio title="Experience Overview" items={experiences} />
-        <Bio title="Awards" items={awards} />
-        <Bio title="Qualifications" items={qualifications} />
-        <Bio title="Education" items={education} />
+        {blocks.map((block, i) => {
+          // ⬇️ 각 섹션별로 fade+scale (3초짜리 천천히 등장)
+          const { style, className } = useFadeScaleAnimation({
+            duration: 3000,  // 등장 속도
+            delay: i * 300,  // 순차 등장
+            initialScale: 0.97,
+          });
+
+          return (
+            <section key={block.title} style={style} className={className}>
+              <Bio title={block.title} items={block.items} />
+            </section>
+          );
+        })}
       </div>
     </main>
   );
