@@ -123,8 +123,8 @@ export const awards: TimelineItem[] = [
   {
     type: "award",
     title:
-      "우수상 (활동영상부문)",
-    org: "KIV 월드프렌즈코리아 IT봉사단 성과발표대회",
+      "NIA 원장상, 우수상 (활동영상부문)",
+    org: "2023 KIV 월드프렌즈코리아 IT봉사단 성과발표대회",
     displayDate: "2023.11.30",
     start: "2023-11-30",
   },
@@ -158,6 +158,14 @@ export const awards: TimelineItem[] = [
     org: "Hangai University",
     displayDate: "2025.08.15",
     start: "2025-08-15",
+  },
+  {
+    type: "award",
+    title:
+      "NIA 원장상, 우수상 (우수활동부문)",
+    org: "2025 KIV 월드프렌즈코리아 IT봉사단 성과발표대회",
+    displayDate: "2025.10.24",
+    start: "2025-10-24",
   },
 ];
 
