@@ -6,15 +6,17 @@ interface ProjectButtonsProps {
   github?: string;
   figma?: string;
   application?: string;
+  medium?: string;
 }
 
-export default function ProjectButtons({ github, figma, application }: ProjectButtonsProps) {
+export default function ProjectButtons({ github, figma, application,medium }: ProjectButtonsProps) {
   const baseStyle =
     "border border-white text-sm bg-gray-50 p-1 flex justify-center items-center rounded-lg transition-all duration-200";
 
   const links = [
     { href: github, label: "Github", width: "w-24" },
     { href: figma, label: "Figma", width: "w-24" },
+    { href: medium, label: "Medium", width: "w-24" },
     { href: application, label: "Application", width: "w-32" },
   ];
 

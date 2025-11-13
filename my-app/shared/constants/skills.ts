@@ -14,7 +14,7 @@ export const tags1: SkillTag[] = [
   { label: 'Swift UI', bgColor: 'bg-blue-400', textColor: 'text-black' },
   { label: "JavaScript", bgColor: "bg-yellow-200", textColor: "text-black" },
   { label: 'TypeScript', bgColor: 'bg-blue-600', textColor: 'text-white' },
-  { label: "React Query", bgColor: "bg-pink-500", textColor: "text-white" },
+  { label: "Tanstack Query", bgColor: "bg-pink-500", textColor: "text-white" },
   { label: 'axios', bgColor: 'bg-yellow-200', textColor: 'text-yellow-700' },
   { label: "Redux-toolkit", bgColor: "bg-purple-200", textColor: "text-black" },
   { label: 'Jotai', bgColor: 'bg-black', textColor: 'text-white' },

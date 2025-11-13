@@ -31,9 +31,9 @@ export default function MainTemplate() {
 
 
         <div className="grid relative">
-          <div className="relative w-3/4 h-[200px] hidden md:block">
+          <div className="relative w-3/4 h-[200px] hidden lg:block">
             <div
-              className="absolute top-0 left-0 w-full h-full transition-opacity duration-300 md:text-base lg:text-xl"
+              className="absolute top-0 left-0 w-full h-full transition-opacity duration-300 text-base xl:text-lg 2xl:text-2xl"
               style={{ opacity }}
             >
               {aboutme}
@@ -59,7 +59,7 @@ export default function MainTemplate() {
 
       <Banner />
 
-      <div className="md:hidden transition-opacity duration-300" style={{ opacity }}>
+      <div className="lg:hidden transition-opacity duration-300" style={{ opacity }}>
         {aboutme}
       </div>
     </main>

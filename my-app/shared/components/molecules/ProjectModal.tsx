@@ -67,13 +67,38 @@ export default function ProjectModal({ project, onClose }: Props) {
 
         <div className="w-full md:w-1/3 h-2/3 md:h-full p-6 overflow-y-auto">
           <h2 className="text-lg mb-4">{project.title}</h2>
+          {project.achievements && project.achievements.length > 0 && (
+  <div className="mb-4">
+    <div className="flex flex-wrap gap-2">
+      {project.achievements.map((item, idx) => (
+        <span
+          key={idx}
+          className="bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-100 text-xs px-2 py-1 rounded-full font-medium"
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+  </div>
+)}
           <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">
             {project.description}
           </p>
           <hr className="border-gray-300 mb-4 dark:border-gray-700" />
+        {project.techStack && project.techStack.length > 0 && (
+    <div className="mb-4">
+      <h3 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Tech Stacks</h3>
+      <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm">
+        {project.techStack.map((tech, idx) => (
+          <li key={idx}>{tech}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+          <hr className="border-gray-300 mb-4 dark:border-gray-700" />
           <ul className="list-none space-y-2 text-gray-700 dark:text-gray-300">
             {project.roles?.map((role, idx) => (
-              <li key={idx} className="text-sm font-medium">
+              <li key={idx} className="text-sm font-medium whitespace-pre-line">
                 {role}
               </li>
             ))}
@@ -82,6 +107,7 @@ export default function ProjectModal({ project, onClose }: Props) {
             github={project.github}
             figma={project.figma}
             application={project.application}
+            medium={project.medium}
           />
         </div>
       </div>
