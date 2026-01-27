@@ -23,7 +23,7 @@ export default function SplashTemplate (){
         loop={false}
         lottieRef={lottieRef}
         style={{ width: "100%", height: "100%" }}
-        onComplete={() => goNext("/")}
+        onComplete={() => goNext("/main")}
       />
     </div>
   );
