@@ -1,9 +1,11 @@
 "use client";
 
-import Banner from "../atoms/Banner";
 import useHoverOpacity from "../../hooks/useHoverOpacity";
 import { aboutme } from "../../constants/aboutme";
 import { useRouter } from "next/navigation";
+import mainImage from "../../../public/mainImage.json"
+import Lottie from "lottie-react";
+import Title from "../atoms/Title";
 
 export default function MainTemplate() {
   const router = useRouter();
@@ -14,21 +16,20 @@ export default function MainTemplate() {
 
   return (
     <main className="h-full w-full flex flex-col justify-between">
-      <div className="grid flex-1 text-xl p-2 gap-4 grid-cols-1 sm:grid-cols-2 auto-rows-auto">
+     <div className="flex-1 grid text-xl p-2 gap-4 grid-cols-1 sm:grid-cols-2 auto-rows-auto">
 
         <div className="grid">
           <div className="flex flex-col">
-            <span>CHAEMINA</span>
-            <span>채민아</span>
-            <span>Frontend Developer</span>
-            <span>Web/Application</span>
+            <Title>CHAEMINA</Title>
+            <Title>채민아</Title>
+            <Title>Frontend Developer</Title>
+            <Title>Web/Application</Title>
           </div>
 
-          <div className="duration-300" style={{ opacity }}>
-            <img src="/images/Profile.jpg" width={200} className="2xl:w-90" />
-          </div>
+          {/* <div className="fixed duration-300" style={{ opacity }}>
+            <img src="/images/Profile.jpg" width="20%" />
+          </div> */}
         </div>
-
 
         <div className="grid relative">
           <div className="relative w-3/4 h-[200px] hidden lg:block">
@@ -41,27 +42,33 @@ export default function MainTemplate() {
           </div>
 
           <div className="flex flex-col justify-start">
-            <a href="mailto:chaemina82@naver.com">Email</a>
-            <a onClick={() => router.push("/archive")}>Project Archive</a>
-            <a onClick={() => router.push("/bio")}>Biography</a>
-            <a href="https://github.com/chaemina">Github</a>
+            <a href="mailto:chaemina82@naver.com"><Title>Email</Title></a>
+            <a onClick={() => router.push("/archive")}><Title>Project Archive</Title></a>
+            <a onClick={() => router.push("/bio")}><Title>Biography</Title></a>
+            <a href="https://github.com/chaemina"><Title>Github</Title></a>
             <a
               onMouseEnter={onEnter}
               onMouseLeave={onLeave}
               onClick={onClick}
               className="cursor-pointer"
             >
-              About me
+              <Title>About me</Title>
             </a>
           </div>
         </div>
       </div>
-
-      <Banner />
+      
+    <div className="flex-1 ">
+      <Lottie
+        animationData={mainImage}
+        style={{ width: "50%" }}
+        />
+    </div>
+{/* 
 
       <div className="lg:hidden transition-opacity duration-300" style={{ opacity }}>
         {aboutme}
-      </div>
+      </div> */}
     </main>
   );
 }
