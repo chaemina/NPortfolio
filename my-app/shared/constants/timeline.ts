@@ -3,7 +3,6 @@ export type TimelineItem = {
   org?: string;
   displayDate: string;
   type?: "career" | "experience" | "award" | "qualification" | "education";
-  link?: string;
   start?: string; 
   end?: string;   
 };

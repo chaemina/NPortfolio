@@ -1,28 +1,20 @@
 import { TimelineItem } from "../../constants/timeline";
 import TypeBadge from "../atoms/TypeBadge";
+import Text from "../atoms/Text";
+import Caption from "../atoms/Caption";
 
 export default function TimelineItemCard({ item }: { item: TimelineItem }) {
   return (
-    <li className="relative pl-6">
+    <li className="relative pl-[16px] md:pl-[24px]">
       <span className="absolute left-0 top-2 block h-2 w-2 rounded-full bg-gray-400" />
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2 md:gap-1">
         <div className="flex items-center gap-2">
           <TypeBadge type={item.type} />
-          <span className="font-medium">{item.title}</span>
+          <Text>{item.title}</Text>
         </div>
-        {item.org && <div className="text-sm text-gray-600">{item.org}</div>}
+        {item.org && <Caption className="text-gray-600">{item.org}</Caption>}
         {item.displayDate && (
-          <div className="text-xs text-gray-500">{item.displayDate}</div>
-        )}
-        {item.link && (
-          <a
-            className="text-xs underline text-blue-600 hover:text-blue-800"
-            href={item.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            관련 링크
-          </a>
+          <Caption className="text-gray-500">{item.displayDate}</Caption>
         )}
       </div>
     </li>

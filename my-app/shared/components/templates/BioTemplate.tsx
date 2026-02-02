@@ -9,6 +9,9 @@ import {
   education,
 } from "../../constants/timeline";
 import useFadeScaleAnimation from "../../hooks/useFadeScaleAnimation";
+import Container from "../atoms/Container";
+import Title from "../atoms/Title";
+import Text from "../atoms/Text";
 
 export default function BioTemplate() {
   const blocks = [
@@ -20,20 +23,20 @@ export default function BioTemplate() {
   ];
 
   return (
-    <main className="min-h-screen w-full px-4 md:px-8 py-10">
-      <header className="mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold">Bio</h1>
-        <p className="text-gray-600 mt-1">
+    <main className="min-h-screen w-full bg-[#f8f8f8]">
+     <Container>
+      <header className="mb-8 mt-10">
+        <Title>Bio</Title>
+        <Text className="text-gray-600 mt-1">
           Career · Experience · Awards · Qualifications · Education
-        </p>
+        </Text>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
         {blocks.map((block, i) => {
-          // ⬇️ 각 섹션별로 fade+scale (3초짜리 천천히 등장)
           const { style, className } = useFadeScaleAnimation({
-            duration: 3000,  // 등장 속도
-            delay: i * 300,  // 순차 등장
+            duration: 3000,  
+            delay: i * 300, 
             initialScale: 0.97,
           });
 
@@ -44,6 +47,7 @@ export default function BioTemplate() {
           );
         })}
       </div>
+      </Container>
     </main>
   );
 }

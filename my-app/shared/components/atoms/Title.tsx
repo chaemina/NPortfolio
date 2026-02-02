@@ -1,10 +1,11 @@
 interface Props {
   children: React.ReactNode;
+  className?: string;
 }
 
-const Title = ({ children }: Props) => {
+const Title = ({ children, className }: Props) => {
   return (
-    <span className="text-[18px] md:text-[24px] lg:text-[28px] 2xl:text-[32px]">
+    <span className={`leading-[1.3] md:leading-[1.4] text-[20px] md:text-[24px] lg:text-[28px] 2xl:text-[32px] ${className ?? ""}`}>
       {children}
     </span>
   );
