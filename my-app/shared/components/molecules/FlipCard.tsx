@@ -9,7 +9,7 @@ import Caption from '../atoms/Caption';
 interface FlipCardProps {
   image: string;
   title: string;
-  year: string;
+  year?: string;
   content: string;
   href?: string;
 }

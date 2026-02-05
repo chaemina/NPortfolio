@@ -22,7 +22,7 @@ const Header = () => {
         <Title className="font-bold">
             <Button
               href="/project"
-              className={isProject ? "underline decoration-2 underline-offset-13" : ""}
+              className= {`${isProject ? "underline decoration-2 underline-offset-13" : ""}  hover:text-gray-500 `}
             >
               Project
             </Button>
@@ -31,7 +31,7 @@ const Header = () => {
           <Title className="font-bold">
             <Button
               href="/about"
-              className={isAbout ? "underline  decoration-2 underline-offset-13" : ""}
+              className= {`${isAbout ? "underline decoration-2 underline-offset-13" : ""}  hover:text-gray-500 `}
             >
               About
             </Button>

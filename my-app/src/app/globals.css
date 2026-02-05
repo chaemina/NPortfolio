@@ -8,18 +8,18 @@
 }
 
 
-
+/* 
 @font-face {
   font-family: "BaseFont";
-  src: url("/fonts/Helvetica-Light.ttf") format("truetype");
-  font-weight: 400;
+  src: url("/fonts/HelLightvetica-.ttf") format("truetype");
+  font-weight: 100;
   font-style: normal;
-}
+} */
 
 @font-face {
   font-family: "BaseFont";
-  src: url("/fonts/Helvetica-Bold.ttf") format("truetype");
-  font-weight: 700;
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 500;
   font-style: normal;
 }
 

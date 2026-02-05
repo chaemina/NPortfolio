@@ -8,6 +8,8 @@ import MainLottie from "../organisms/MainLottie";
 import Player from "../organisms/Player";
 import Slider from "../organisms/Slider";
 import Container from "../atoms/Container";
+import Title from "../atoms/Title";
+import ProjectGrid from "../organisms/ProjectGrid";
 
 export default function MainTemplate() {
   const router = useRouter();
@@ -24,6 +26,10 @@ export default function MainTemplate() {
          </div>
 
         {/* Recent Project Grid */}
+        <div className="w-full mt-[50px] lg:mt-[80px]">
+           <Title className="font-bold">Recent Projects</Title>
+           <ProjectGrid/>
+        </div>
 
         {/* about */}
         <About/>
