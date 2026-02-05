@@ -5,7 +5,7 @@ interface Props {
 
 const Text = ({ children, className }: Props) => {
   return (
-    <p className={`leading-[1.3] md:leading-[1.4] text-[16px] 2xl:text-[18px] ${className ?? ""}`}>
+    <p className={`leading-[1.5] md:leading-[1.6] text-[16px] md:text-[20px]  ${className ?? ""}`}>
       {children}
     </p>
   );
