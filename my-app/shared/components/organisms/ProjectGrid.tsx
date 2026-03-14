@@ -3,8 +3,8 @@ import { projects } from "../../constants/project";
 
 const ProjectGrid = () => {
   return (
-    <div className="flex w-full space-x-5 mt-[16px]">
-      <div className="w-1/2 space-y-5">
+    <div className="flex flex-col lg:flex-row w-full gap-5 mt-[16px]">
+      <div className="w-full lg:w-1/2 space-y-5">
         {projects.column1.map((project, idx) => (
           <ImageCard
             key={idx}
@@ -16,7 +16,7 @@ const ProjectGrid = () => {
         ))}
       </div>
 
-      <div className="w-1/2 space-y-5">
+      <div className="lg:w-1/2 w-full space-y-5">
         {projects.column2.map((project, idx) => (
           <ImageCard
             key={idx}

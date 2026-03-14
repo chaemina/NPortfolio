@@ -5,7 +5,7 @@ interface Props {
 
 const LargeText = ({ children, className }: Props) => {
   return (
-    <span className={`font-light text-[25px] lg:text-[40px] 2xl:text-[48px] leading-[1.3] lg:leading-[1.4]  ${className ?? ""}`}>
+    <span className={`font-light text-[25px] lg:text-[35px] xl:text-[40px] 2xl:text-[48px] leading-[1.3] lg:leading-[1.4]  ${className ?? ""}`}>
       {children}
     </span>
   );

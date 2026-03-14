@@ -23,3 +23,4 @@ export const BusTags: Tag[] = [
   { type: "stack", name: "Swift UI" },
   { type: "date", value: "2023.12.12 – 2023.12.25" },
 ];
+
