@@ -1,48 +1,56 @@
 import Frame from "../../organisms/Frame";
-import mainImage from "../../../../public/images/projects/Bus.jpeg"
+import BusImage1 from "../../../../public/images/projects/BusImage1.jpeg";
+import BusImage2 from "../../../../public/images/projects/BusImage2.jpg"
+import BusHero from "../../../../public/images/projects/BusHero.png"
 import Image from "next/image";
 import Container from "../../atoms/Container";
 import Title from "../../atoms/Title";
 import Text from "../../atoms/Text";
 import LargeText from "../../atoms/LargeText";
-import {projectDescription} from "../../../constants/project"
+import { projectDescription } from "../../../constants/project";
 import StackTag from "../../atoms/StackTag";
 import { BusTags } from "../../../constants/stacks";
 
-
 const BusTemplate = () => {
-    return (
+
+  return (
     <Frame>
-         <main className="h-full w-full flex flex-col justify-content items-center  ">
-            {/* 대표 이미지/ 영상 */}
-           <div className="w-full flex aspect-[1000/800] 2xl:w-[50%] relative">
-           <Image
-                src={mainImage}
+      <main className="w-full">
+
+        <div className="w-full 2xl:w-[80%] mx-auto px-8 pt-24 pb-24 flex flex-col gap-10 items-center">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20 items-center">
+            <div className="w-full ">
+              <Image
+                src={BusHero}
                 alt="bus main image"
-                fill/>
+              />
             </div>
-            <div className="bg-[#fcf7ed] w-full"> 
-                <Container className="mt-10 md:w-[70%] space-y-5 ">
-                {/* 2줄 소개 (대표기능) */}
-                <LargeText className="font-thin block"> 광주광역시의 실시간 버스 위치와 도착 정보를 AI 기술로 정확하게 제공하는 어플리케이션 </LargeText>
+            {/* TEXT */}
+            <div className="flex flex-col gap-4">
+              <LargeText className="text-gray-500 leading-relaxed">
+                AI 기술을 활용해 광주광역시의 실시간 버스 위치와
+                도착 정보를 제공하는 지도 기반 모빌리티 서비스
+              </LargeText>
 
-            {/* 기간, 사용 스택 태그  */}
-            <div className="flex gap-2">
-            {BusTags.map((tag,idx) => (
-                <StackTag key={idx} tag={tag} />
-            ))}
+              <div className="flex gap-2 flex-wrap">
+                {BusTags.map((tag, idx) => (
+                  <StackTag key={idx} tag={tag} />
+                ))}
+              </div>
             </div>
+          </div>
 
-            {/* 개발 과정 디테일 하게 (역할, 목적, 성취 결과 ) */}
-                <Text className="font-light whitespace-pre-line">
-                    {projectDescription.bus}
-                </Text>
-            {/* 페이지 설명 + 개발 기능, 어려웠던 점 등 + 사진들  */}
-                </Container>
+          <div className="w-[80%]">
+              <Image
+                src={BusImage1}
+                alt="bus main image"
+              />
             </div>
-        </main>
+        </div>
+      </main>
     </Frame>
-    )
-}
+  );
+};
 
 export default BusTemplate;
