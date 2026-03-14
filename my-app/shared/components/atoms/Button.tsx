@@ -14,7 +14,7 @@ const Button = ({ children, href, className }: Props) => {
   return (
     <button
       onClick={() => navigate(href)}
-      className={`justify-center flex items-center h-[48px] p-[16px] lg:h-[60px] lg:text-16px ${className ?? ""}`}
+      className={`justify-center flex items-center h-[48px] lg:h-[60px] p-[16px] 2xl:p-[50px] text-lg lg:text-xl 2xl:text-4xl ${className ?? ""}`}
     >
       {children}
     </button>

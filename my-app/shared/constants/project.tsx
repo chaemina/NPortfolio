@@ -6,15 +6,19 @@ export interface Project {
   src: string;
   title: string;
 }
-
+export interface ButtonLink {
+  label: string;
+  url: string;
+}
 export interface ProjectTemplateProps {
-  heroImage: any;
+  heroImage?: any;
   description: string;
   tags: Tag[];
   image1: any;
   image2: any;
   explain: ReactNode;
   role: ReactNode;
+  buttons: ButtonLink[];
 }
 
 export const projects = {
@@ -74,5 +78,67 @@ export const bus = {
      <br /><br />
       서비스 특성을 고려한 캐싱 전략과 데이터 로딩 방식을 설계하며 성능 최적화를 위해 노력했습니다.
     </>
-  )
+  ),
+  buttons: [
+  {
+    label: "Notion",
+    url: "https://whip-revolve-4ce.notion.site/30411b83da1780808e7fd83af980597f?pvs=74"
+  },
+]
 };
+
+export const maeum = {
+  explain: (
+  <>
+    자폐 스펙트럼 장애(ASD) 아동은 사회적 상호작용과 의사소통에 어려움을 겪지만,
+    지역 간 치료 인프라 격차와 비용 문제로 충분한 치료 기회를 얻기 어려운 경우가 많습니다.
+    이러한 한계를 보완하기 위해 최근에는 디지털 기술을 활용한 디지털 치료제에 대한 연구가 활발히 이루어지고 있습니다.
+    <br /><br />
+
+    이에 따라 ASD 아동이 일상 환경에서도 지속적으로 의사소통 훈련을 할 수 있도록 모바일 기반  <span className="bg-pink-100 px-1">AI 대화 훈련 플랫폼</span>을 개발했습니다.
+    치료센터에서 활용되는 놀이 치료 방식을 참고하여 질문과 추론을 통해 상호작용을 유도하는 <span className="bg-pink-100 px-1">‘스무고개’ 게임 형태의 대화 훈련</span>을 설계했습니다.
+    <br /><br />
+
+    또한 사람과의 직접적인 상호작용이 부담스러울 수 있다는 점을 고려해 
+    AI 캐릭터와 대화를 연습할 수 있도록 구성했으며,
+    실제 대화와 유사한 경험을 제공하기 위해 
+    <span className="bg-pink-200 px-1">양방향 음성 소통 기반 인터랙션</span>을 핵심 기능으로 구현했습니다.
+    <br /><br />
+
+    해당 프로젝트는 연구 성과를 인정받아 <span className="bg-pink-100 px-1">ASK 2024 학술대회 논문 게재</span>와 <span className="bg-pink-100 px-1">SW 디지털 경진대회 금상</span>을 수상했습니다.
+  </>
+),
+
+  role: (
+  <>
+    React Native 기반으로 iOS와 Android 동시 개발 환경을 구축해 <span className="bg-pink-100 px-1">크로스 플랫폼</span>을 구현했습니다.
+    메인, 게임, 설정, 스플래시 화면 등 주요 UI를 WCAG 접근성 지침 기반으로 설계하고, 기능을 개발했습니다.
+    <br /><br />
+
+    음성 기반 대화 기능 구현을 위해 <span className="bg-pink-200 px-1">React-Native-Voice</span>를 활용해 사용자 음성을 STT로 변환하고,
+    서버에서 생성된 AI 응답을 <span className="bg-pink-200 px-1">Clova TTS와 react-native-sound</span>로 출력하여 양방향 음성 소통이 가능하게 했습니다.
+    <br /><br />
+
+    그 외에는 WebView 기반 카카오 OAuth 로그인을 구현하고 토큰을 AsyncStorage에 저장해
+    앱 재실행 시에도 인증 상태가 유지되도록 설계하였으며, 
+     
+    react-hook-form 기반 유효성 검증 구조와 Redux Toolkit 전역 상태 관리를 활용해
+    회원가입 흐름을 구성했습니다. 
+  </>
+),
+  buttons: [
+  {
+    label: "Notion",
+    url: "https://whip-revolve-4ce.notion.site/30711b83da17800393aec265b5596778?pvs=74"
+  },
+  {
+    label: "Medium",
+    url: "https://medium.com/@chaemina8282/%EB%A7%88%EC%9D%8C%EC%9D%98-%EC%B0%BD-959db33133e3",
+  },
+    {
+    label: "Github",
+    url: "https://github.com/goodoong/maeum2_FE",
+  },
+]
+};
+

@@ -16,6 +16,7 @@ const BusTemplate = () => {
       image2={BusImage2}
       explain = {bus.explain}
       role = {bus.role}
+      buttons = {bus.buttons}
     />
   );
 };
