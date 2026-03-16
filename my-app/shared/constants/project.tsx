@@ -23,33 +23,29 @@ export interface ProjectTemplateProps {
 }
 
 export const projects = {
-  column1: [
+    column1: [
+       {
+      href: "/project/garden",
+      src: "/images/projects/Garden.png",
+      title: "Garden. 함께 피워내는 한국어 교육 플랫폼 ",
+    },
+    {
+      href: "/project/maeum",
+      src: "/images/projects/MaeumImage1.png",
+      title: "생성형 AI 양방향 소통 APP. 마음의 창",
+    },
+   
+  ],
+  column2: [
     {
       href: "/project/bus",
       src: "/images/projects/Bus_map.jpg",
       title: "광주 버스 IOS",
     },
-    {
-      href: "/project/garden",
-      src: "/images/projects/Garden.png",
-      title: "Garden. 함께 피워내는 한국어 교육 플랫폼 ",
-    },
-  ],
-  column2: [
-    {
-      href: "/project/maeum",
-      src: "/images/projects/Maeum_main.jpg",
-      title: "생성형 AI 양방향 소통 APP. 마음의 창",
-    },
-    {
+     {
       href: "/project/wastebank",
       src: "/images/projects/WasteBank.png",
       title: "Waste Bank 실시간 모니터링 시스템",
-    },
-        {
-      href: "/project/caramella",
-      src: "/images/projects/Caramella.png",
-      title: "(주)카라멜라 인트라넷 웹 사이트",
     },
   ],
 };
@@ -143,3 +139,57 @@ export const maeum = {
 ]
 };
 
+
+
+export const waste = {
+  explain: (
+  <>
+    Waste Bank 협동조합은 인도네시아 북자카르타 지역의 환경문제를 해결하는 경제적 참여 방식입니다. 
+    이 협동조합은 지역의 폐기물을 수거하고, 재활용 가능한 자원을 판매해 수익을 창출하고 있습니다.
+    <br /><br />
+
+  그러나 기존의 수동 관리 방식으로는 증가하는 고객 수와 폐기물 처리를 효율적으로 관리하기 어려워,
+기능을 역할별로 분리한 <span className="bg-emerald-100 px-1">실시간 모니터링 시스템</span>을 도입했습니다.
+<br /><br />
+
+    지도에서 쓰레기 위치와 수거원의 위치를 확인하고 수거 과정을 실시간으로 관리할 수 있도록 설계해 수거 프로세스의 운영 효율을 높이는 것을 목표로 하였으며,
+    본 프로젝트는 국제 학술대회 <span className="bg-emerald-200 px-1">ICICT 2025</span>
+    (International Conference on Information and Communication Technology) 에서 연구 및 개발의 가치를 국제적으로 인정받아 <span className="bg-emerald-200 px-1">Springer LNNS</span> 시리즈에
+    논문이 게재되었습니다.
+  </>
+),
+
+  role: (
+  <> 
+    팀장으로서 클라이언트인 <span className="bg-emerald-100 px-1"> 인도네시아 다르마자야 대학</span>과 직접 소통하며 요구사항을 파악했습니다.
+    논문과 Application Form을 기반으로 Waste Bank 구조를 분석하고 유스케이스 다이어그램과 와이어프레임을 제작해
+    서비스 흐름을 정리했습니다.
+    <br /><br />
+
+    React와 React Native 기반  <span className="bg-emerald-200 px-1">하이브리드 구조</span>를 설계하여, 
+    네이티브 기능이 필요한 (지도, 위치 감지 등) 화면은 앱으로 구현하고
+    그 외 페이지는 웹으로 개발해 <span className="bg-emerald-100 px-1">WebView</span>로 출력했습니다.
+    <br /><br />
+
+    메인 수거 모니터링 기능은 <span className="bg-emerald-100 px-1">react-native-maps</span>를 활용해
+쓰레기 위치를 지도 마커로 시각화하고, <span className="bg-emerald-100 px-1">react-native-geolocation-service</span>를 사용해
+수거원의 실시간 위치 추적을 구현했습니다. 
+  </>
+),
+
+  buttons: [
+  {
+    label: "Notion",
+    url: "https://whip-revolve-4ce.notion.site/WasteBankApp-30711b83da1780b2a880c6fa82825b9e?pvs=73"
+  },
+  {
+    label: "Medium",
+    url: "https://medium.com/@chaemina8282/react-native-%EC%9C%84%EC%B9%98-%EC%B6%94%EC%A0%81-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-3a74fd413623"
+  },
+    {
+    label: "Github",
+    url: "https://github.com/chaemina/WasteBankApp"
+  },
+
+]
+};

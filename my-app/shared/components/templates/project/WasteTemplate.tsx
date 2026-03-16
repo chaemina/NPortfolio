@@ -2,7 +2,7 @@ import ProjectTemplate from "../../templates/ProjectTemplate";
 
 import Waste1 from "../../../../public/images/projects/Waste1.png"
 import Waste2 from "../../../../public/images/projects/Waste2.png"
-import {maeum} from "../../../constants/project"
+import {waste} from "../../../constants/project"
 import Slider from "../../organisms/Slider";
 import { WasteTags } from "../../../constants/stacks";
 import Frame from "../../organisms/Frame";
@@ -23,9 +23,9 @@ const WasteTemplate = () => {
       tags={WasteTags}
       image1={Waste1}
       image2={Waste2}
-      explain = {maeum.explain}
-      role = {maeum.role}
-      buttons = {maeum.buttons}
+      explain = {waste.explain}
+      role = {waste.role}
+      buttons = {waste.buttons}
     />
     <div className="w-full">
         <Slider items={wasteSliderItems} />
