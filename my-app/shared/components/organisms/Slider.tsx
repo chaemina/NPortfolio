@@ -3,8 +3,7 @@
 import { useDragCarousel } from "../../hooks/useDragCarousel";
 import FlipCard from "../molecules/FlipCard";
 import Image from "next/image";
-import { useEffect } from "react";
-import { useLoading } from "../../context/LoadingContext";
+import { useState } from "react";
 
 interface SliderItem {
   image: string;
@@ -20,12 +19,6 @@ interface Props {
 
 const Slider = ({ items }: Props) => {
   const emblaRef = useDragCarousel();
-  const { setLoading } = useLoading();
-
-  useEffect(() => {
-    setLoading(true);
-  }, []);
-
 
   return (
     <div
@@ -60,7 +53,6 @@ const Slider = ({ items }: Props) => {
                     alt={`slider image ${index}`}
                     fill
                     className="object-contain"
-                    onLoad={() => setLoading(false)}
                   />
                 </div>
               )}
