@@ -14,6 +14,12 @@ export const StackStyle: Record<string, string> = {
   JS:
     "px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-200",
 
+  TS:
+    "px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200",
+
+  "styled-components":
+    "px-2 py-0.5 rounded-full bg-pink-100 text-pink-800 border border-pink-200",
+
   nativewind:
     "px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 border border-teal-200",
 
@@ -52,4 +58,14 @@ export const MaeumTags: Tag[] = [
   { type: "stack", name: "TanStack Query" },
     { type: "stack", name: "Redux Toolkit" },
   { type: "date", value: "2024.03.29 – 2024.08.27" },
+];
+
+export const WasteTags: Tag[] = [
+  { type: "stack", name: "ReactNative" },
+  { type: "stack", name: "TS" },
+  { type: "stack", name: "styled-components" },
+  { type: "stack", name: "axios" },
+  { type: "stack", name: "TanStack Query" },
+    { type: "stack", name: "Redux Toolkit" },
+  { type: "date", value: "2024.06.01 – 2024.09.13" },
 ];

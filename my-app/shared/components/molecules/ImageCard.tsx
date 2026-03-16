@@ -1,19 +1,23 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import Title from "../atoms/Title";
+import { usePageTransition } from "../../hooks/usePageTransition";
 
 interface Props {
   src: string;
   alt: string;
   href: string;
-  title : string;
+  title: string;
 }
 
 const ImageCard = ({ src, alt, href, title }: Props) => {
+  const { navigate } = usePageTransition();
+
   return (
-    <Link
-      href={href}
-      className="relative block group overflow-hidden"
+    <div
+      onClick={() => navigate(href)}
+      className="relative block group overflow-hidden cursor-pointer"
     >
       <Image
         src={src}
@@ -22,6 +26,7 @@ const ImageCard = ({ src, alt, href, title }: Props) => {
         height={300}
         className="w-full object-cover"
       />
+
       <div
         className="
           absolute inset-0
@@ -33,8 +38,9 @@ const ImageCard = ({ src, alt, href, title }: Props) => {
           p-10
         "
       >
-        <Title className="font-light text-white">{title}</Title></div>
-    </Link>
+        <Title className="font-light text-white">{title}</Title>
+      </div>
+    </div>
   );
 };
 

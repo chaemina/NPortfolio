@@ -12,6 +12,7 @@ export interface ButtonLink {
 }
 export interface ProjectTemplateProps {
   heroImage?: any;
+  video? : string;
   description: string;
   tags: Tag[];
   image1: any;

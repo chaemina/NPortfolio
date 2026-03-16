@@ -10,6 +10,7 @@ import Slider from "../organisms/Slider";
 import Container from "../atoms/Container";
 import Title from "../atoms/Title";
 import ProjectGrid from "../organisms/ProjectGrid";
+import { experienceSliderItems } from "../../constants/experiences";
 
 export default function MainTemplate() {
   const router = useRouter();
@@ -47,7 +48,7 @@ export default function MainTemplate() {
          </div>
           
         {/* Experience Grid */}
-            <Slider  />
+           <Slider items={experienceSliderItems} />
         </main>
         </Container>
       </Frame>

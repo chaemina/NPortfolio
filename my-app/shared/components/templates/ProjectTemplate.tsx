@@ -10,6 +10,7 @@ const videoStart = 60;
 
 const ProjectTemplate = ({
   heroImage,
+  video,
   description,
   tags,
   image1,image2,
@@ -17,9 +18,8 @@ const ProjectTemplate = ({
   buttons
 }: ProjectTemplateProps) => {
   return (
-    <Frame>
       <main className="w-full">
-        <div className="w-full 2xl:w-[80%] mx-auto px-8 pt-24 pb-24 flex flex-col gap-10 items-center">
+        <div className="w-full 2xl:w-[80%] mx-auto px-8 pt-24 flex flex-col gap-10 items-center">
 
           {/* HERO */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-20 items-center">
@@ -30,7 +30,7 @@ const ProjectTemplate = ({
             : 
             <iframe
             className="w-full aspect-video rounded-xl"
-            src={`https://www.youtube.com/embed/Xs86UbhY9k8?start=${videoStart}&rel=0&modestbranding=1`}
+            src={video}
             title="project video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -68,7 +68,7 @@ const ProjectTemplate = ({
             </div>
              <div className="w-full flex flex-col md:flex-row p-5 lg:p-10 justify-center items-center gap-5 2xl:gap-20">
                
-              <LargeText className="text-gray-500 leading-relaxed">
+              <LargeText className="text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis">
                 Read More About This Project
               </LargeText>
               <div className="flex gap-10">
@@ -77,10 +77,8 @@ const ProjectTemplate = ({
                  ))}
               </div>
               </div>
-           
              </div>
       </main>
-    </Frame>
   );
 };
 

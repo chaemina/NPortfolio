@@ -11,10 +11,9 @@ export const usePageTransition = () => {
     if (pathname === href) return;
 
     if (!isInternalLink(href)) {
-      window.location.href = href;
+      window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
-
     document.body.classList.add("page-fade-out");
 
     setTimeout(() => {

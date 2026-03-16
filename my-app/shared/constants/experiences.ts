@@ -1,3 +1,5 @@
+import { experienceImages } from "./images";
+
 export interface ExperienceContent {
   title: string;
   year: string;
@@ -141,3 +143,16 @@ SNS 홍보 활동
     content: `기업직무분석 경진대회에서 금융 IT 기업의 직무 구조와 디지털 전환 전략을 분석·발표하여 장려상을 수상했습니다.`,
   },
 ];
+
+
+export const experienceSliderItems = experienceImages.map((image, index) => {
+  const exp = experienceContentList[index];
+
+  return {
+    image,
+    title: exp.title,
+    year: exp.year,
+    content: exp.content,
+    href: exp.href,
+  };
+});
