@@ -48,6 +48,7 @@ export default function MainTemplate() {
          </div>
           
         {/* Experience Grid */}
+
            <Slider items={experienceSliderItems} />
         </main>
         </Container>

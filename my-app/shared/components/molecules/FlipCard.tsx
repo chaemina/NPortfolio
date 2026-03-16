@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState,useEffect} from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import Text from '../atoms/Text';
+import { useLoading } from '../../context/LoadingContext';
 import Caption from '../atoms/Caption';
 
 interface FlipCardProps {
@@ -15,8 +15,13 @@ interface FlipCardProps {
 }
 
 const FlipCard = ({ image, title, year, content, href }: FlipCardProps) => {
-  const [flipped, setFlipped] = useState(false);
   const router = useRouter();
+  const [flipped, setFlipped] = useState(false);
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    setLoading(true);
+  }, []);
 
   return (
     <div
@@ -34,7 +39,12 @@ const FlipCard = ({ image, title, year, content, href }: FlipCardProps) => {
       >
         {/* Front */}
         <div className="absolute inset-0 [backface-visibility:hidden]">
-          <Image src={image} alt={title} fill className="object-cover" />
+          <Image 
+          src={image} 
+          alt={title} 
+          fill  
+          onLoad={() => setLoading(false)} 
+          className="object-cover" />
         </div>
 
         {/* Back */}
