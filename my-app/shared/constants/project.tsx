@@ -193,3 +193,52 @@ export const waste = {
 
 ]
 };
+
+
+export const garden = {
+  explain: (
+<>
+한국어는 세계적으로 빠르게 성장하고 있는 언어 중 하나로, 한류의 확산과 함께
+해외에서 한국어 학습에 대한 관심이 지속적으로 증가하고 있지만 기존 한국어 교육 과정은 문법 위주 커리큘럼이 많아
+학습자의 관심사를 반영하지 못한다는 한계가 있습니다.
+<br /><br />
+
+이에 따라 <span className="bg-green-100 px-1">관심사 기반 한류 콘텐츠</span> 를 활용해 외국인을 대상으로 한국어를 학습할 수 있도록 하는 <span className="bg-green-100 px-1">영상 스트리밍 웹 서비스</span>를 설계했습니다.
+<br /><br />
+
+Garden은 한국어 영상 서비스 / 멘토 멘티 서비스 / 채팅 서비스 기능을 제공합니다.
+</>
+),
+  role: (
+<>
+  계정 관리, 마이페이지, 메인 영상 서비스 기능의 프론트엔드 개발을 담당했습니다. Axios 인스턴스와 인터셉터를 활용해 <span className="bg-green-100 px-1">토큰 기반 인증 구조</span>를 구현하고,
+  Access Token 만료 시 Refresh 요청을 통해 토큰을 재발급한 뒤 기존 요청을 재시도하도록 설계했습니다.
+  <br /><br />
+
+  회원가입, 로그인, 개인정보 수정 기능에서는
+  <span className="bg-green-100 px-1">React Hook Form</span>과 <span className="bg-green-100 px-1">MUI 컴포넌트</span>를 활용해
+  폼 상태 관리와 실시간 유효성 검사를 구현했습니다. 또한 사용자 UID 기반 프로필 조회 구조를 설계하고 <span className="bg-green-100 px-1">TanStack Query</span>의 useMutation을 활용해
+  사용자 정보 수정 기능을 구현했습니다.
+  <br /><br />
+
+  메인 영상 서비스는 useInfiniteQuery와 react-intersection-observer를 활용해 <span className="bg-green-200 px-1">무한 스크롤</span>로 구현했습니다.
+  또한 로그인 시 <span className="bg-green-100 px-1">사용자의 관심사 기반 추천 영상</span>과 최근 시청 영상 기능을 제공하고, React Player로 영상 재생과 한국어·영어 자막 기능을 구현했습니다.
+</>
+),
+
+  buttons: [
+  {
+    label: "Notion",
+    url: "https://whip-revolve-4ce.notion.site/Garden-30711b83da17808b937df32807a13124"
+  },
+  {
+    label: "Medium",
+    url: "https://medium.com/@chaemina8282/%ED%95%9C%EA%B5%AD%EC%96%B4-%EA%B5%90%EC%9C%A1-%ED%94%8C%EB%9E%AB%ED%8F%BC-garden-b4b1217537f7"
+  },
+    {
+    label: "Github",
+    url: "https://github.com/Step3-kakao-tech-campus/Team18_FE"
+  },
+
+]
+};

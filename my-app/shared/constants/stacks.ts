@@ -11,6 +11,9 @@ export const StackStyle: Record<string, string> = {
   ReactNative:
     "px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 border border-blue-200",
 
+  React:
+    "px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 border border-blue-200",
+
   JS:
     "px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-200",
 
@@ -20,7 +23,7 @@ export const StackStyle: Record<string, string> = {
   "styled-components":
     "px-2 py-0.5 rounded-full bg-pink-100 text-pink-800 border border-pink-200",
 
-  nativewind:
+  tailwind:
     "px-2 py-0.5 rounded-full bg-teal-100 text-teal-700 border border-teal-200",
 
   axios:
@@ -31,6 +34,9 @@ export const StackStyle: Record<string, string> = {
 
   "Redux Toolkit":
     "px-2 py-0.5 rounded-full bg-violet-100 text-violet-700 border border-violet-200",
+  
+  Jotai:
+    "px-2 py-0.5 rounded-full bg-black text-white border border-violet-200",
 };
 
 
@@ -44,6 +50,16 @@ export type Tag =
       value: string;
     };
 
+export const GardenTags: Tag[] = [
+  { type: "stack", name: "React" },
+  { type: "stack", name: "JS" },
+  { type: "stack", name: "tailwind" },
+  { type: "stack", name: "axios" },
+  { type: "stack", name: "TanStack Query" },
+    { type: "stack", name: "Jotai" },
+  { type: "date", value: "2023.09.26 ~ 2023.11.11" },
+];
+
 export const BusTags: Tag[] = [
   { type: "stack", name: "Swift" },
   { type: "stack", name: "Swift UI" },
@@ -53,7 +69,7 @@ export const BusTags: Tag[] = [
 export const MaeumTags: Tag[] = [
   { type: "stack", name: "ReactNative" },
   { type: "stack", name: "JS" },
-  { type: "stack", name: "nativewind" },
+  { type: "stack", name: "tailwind" },
   { type: "stack", name: "axios" },
   { type: "stack", name: "TanStack Query" },
     { type: "stack", name: "Redux Toolkit" },

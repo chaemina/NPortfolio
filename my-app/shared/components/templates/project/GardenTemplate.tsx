@@ -1,24 +1,23 @@
 import ProjectTemplate from "../../templates/ProjectTemplate";
 
-import BusImage1 from "../../../../public/images/projects/BusImage1.jpeg";
-import BusImage2 from "../../../../public/images/projects/BusImage2.jpg";
-import BusHero from "../../../../public/images/projects/BusHero.png";
-import {bus} from "../../../constants/project"
-import { BusTags } from "../../../constants/stacks";
+import Garden1 from "../../../../public/images/projects/Garden1.png"
+import Garden2 from "../../../../public/images/projects/Garden2.jpeg"
+import {garden} from "../../../constants/project"
+import { GardenTags } from "../../../constants/stacks";
 import Frame from "../../organisms/Frame";
 
 const GardenTemplate = () => {
   return (
     <Frame>
     <ProjectTemplate
-      heroImage={BusHero}
-      description="AI 기술을 활용해 광주광역시의 실시간 버스 위치와 도착 정보를 제공하는 지도 기반 모빌리티 서비스"
-      tags={BusTags}
-      image1={BusImage1}
-      image2={BusImage2}
-      explain = {bus.explain}
-      role = {bus.role}
-      buttons = {bus.buttons}
+      video="/files/gardenPT.pdf"
+      description="관심사 기반 K-컨텐츠를 통한 한국어 학습 플랫폼"
+      tags={GardenTags}
+      image1={Garden1}
+      image2={Garden2}
+      explain = {garden.explain}
+      role = {garden.role}
+      buttons = {garden.buttons}
     />
     </Frame>
   );
