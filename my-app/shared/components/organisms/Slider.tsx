@@ -19,6 +19,7 @@ interface Props {
 
 const Slider = ({ items }: Props) => {
   const emblaRef = useDragCarousel();
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <div
@@ -48,11 +49,17 @@ const Slider = ({ items }: Props) => {
                 />
               ) : (
                 <div className="relative w-full aspect-[16/9] rounded-lg mb-[20px]">
+                  {!loaded && (
+                   <div className="absolute inset-0 animate-pulse bg-gray-200 rounded-lg" />
+                )}
                   <Image
                     src={item.image}
                     alt={`slider image ${index}`}
                     fill
-                    className="object-contain"
+                   onLoadingComplete={() => setLoaded(true)}
+                   className={`object-contain transition-opacity duration-500 ${
+                    loaded ? "opacity-100" : "opacity-0"
+                   }`}
                   />
                 </div>
               )}

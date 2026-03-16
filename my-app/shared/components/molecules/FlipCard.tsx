@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import Text from '../atoms/Text';
 import Caption from '../atoms/Caption';
 
 interface FlipCardProps {
@@ -16,6 +15,7 @@ interface FlipCardProps {
 
 const FlipCard = ({ image, title, year, content, href }: FlipCardProps) => {
   const [flipped, setFlipped] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const router = useRouter();
 
   return (
@@ -34,7 +34,20 @@ const FlipCard = ({ image, title, year, content, href }: FlipCardProps) => {
       >
         {/* Front */}
         <div className="absolute inset-0 [backface-visibility:hidden]">
-          <Image src={image} alt={title} fill className="object-cover" />
+          
+          {!loaded && (
+            <div className="absolute inset-0 animate-pulse bg-gray-200" />
+          )}
+
+          <Image
+            src={image}
+            alt={title}
+            fill
+            onLoadingComplete={() => setLoaded(true)}
+            className={`object-cover transition-opacity duration-500 ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+          />
         </div>
 
         {/* Back */}
@@ -55,16 +68,15 @@ const FlipCard = ({ image, title, year, content, href }: FlipCardProps) => {
 
           {href && (
             <button
-            onClick={(e) => {
-              e.stopPropagation();
-              router.push(href);
-            }}
-            className="border border-white py-1 text-xs hover:bg-white hover:text-black transition"
-          >
-            바로가기
-          </button>
+              onClick={(e) => {
+                e.stopPropagation();
+                router.push(href);
+              }}
+              className="border border-white py-1 text-xs hover:bg-white hover:text-black transition"
+            >
+              바로가기
+            </button>
           )}
-          
         </div>
       </div>
     </div>
